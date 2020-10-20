@@ -15,8 +15,10 @@ const messageInput = document.getElementById('message-input');
 //we tested the console log, and it worked :D
 socket.on('chat-message', (data) => 
 { 
-    // calls the appendMessage function and adds it 
+    // this console.logs the data passed    
         // console.log(data);
+
+     // calls the appendMessage function for the data passed and adds it 
     appendMessage(data); 
 })
 
@@ -41,6 +43,4 @@ function appendMessage(message) {
     messageElement.innerText = message; 
     // appends new element to the message container div
     messageContainer.append(messageElement);
-
-
 }
